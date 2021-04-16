@@ -1,0 +1,90 @@
+<html>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+<head>
+  <title>Old time converter</title>
+ <style>
+ img{
+
+ }
+ body {
+  background-image: linear-gradient(tan,lightblue)
+
+}
+ table{
+ font-size: 19px;
+ font-style: italic;
+font-family: 'Damion', cursive;
+}
+h1{
+  font-size: 33px;
+  font-family: fantasy;
+}
+endresult1{
+  text-align: center;
+
+}
+result2{
+  text-align: right;
+}
+ </style>
+ <script>
+function todays(){
+var numtogo=document.getElementById("number").value;
+ numtogo=parseInt(numtogo);
+ var numtogo2=document.getElementById("number2").value;
+  numtogo2=parseInt(numtogo2);
+var nums="FortNights to days    <br> <br>";
+var res=0;
+ for(var i=numtogo2; i<=numtogo; i++){
+  res= i * 14;
+  nums=nums+i+" - "+res+"<br>";
+ }
+document.getElementById("result").innerHTML=nums;
+}
+function tofurlongs(){
+var fur=document.getElementById("number").value;
+ fur=parseInt(fur);
+ var fur2=document.getElementById("number2").value;
+  fur2=parseInt(fur2);
+var part1="miles to furlongs    <br> <br>";
+var ello=0;
+ for(var i=fur2; i<=fur; i++){
+  ello= i * 8;
+  part1=part1+i+" - "+ello+"<br>";
+ }
+document.getElementById("endresult1").innerHTML=part1;
+}
+function topounds(){
+var pound=document.getElementById("number").value;
+ pound=parseInt(pound);
+ var pound2=document.getElementById("number2").value;
+  pound2=parseInt(pound2);
+var nums2="Slugs to Pounds    <br> <br>";
+var res2=0;
+ for(var i=pound2; i<=pound; i++){
+  res2= i * 32.174;
+  nums2=nums2+i+" - "+res2+"<br>";
+ }
+document.getElementById("result2").innerHTML=nums2;
+}
+ </script>
+</head>
+<body>
+  <h1>Hello there, would you like to convert units?</h1>
+ <input type="text" id="number2" value="starting point">
+ <input type="text" id="number" value="end point">
+ <input type="button" value="fortNights to days" onclick="todays()">
+ <input type="button" value="Miles to Furlongs" onclick="tofurlongs()">
+ <input type="button" value="Slugs to Pounds" onclick="topounds()">
+ <br><hr><br>
+ <Table>
+   <tr>
+ <td id="result"></td>
+ <td id="endresult1"></td>
+ <td id="result2"></td>
+ <td><img src="aeoremove.png" width=66% height=33%></td>
+</tr>
+</table>
+</body>
+</html>
